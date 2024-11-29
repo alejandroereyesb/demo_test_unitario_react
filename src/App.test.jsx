@@ -17,7 +17,7 @@ describe("App", () => {
     render(<App title="React" />);
 
     screen.debug();
-  // });
+  });
 
   it("renders Vite + React", () => {
     const { container } = render(<App title="React" />);
@@ -28,7 +28,7 @@ describe("App", () => {
   it('Learn React link has href', () => {
     render(<App />);
     const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toHaveAttribute('href', 'https://react.dev');
+    expect(linkElement).toHaveAttribute('href', 'https://bolito.dev');
   });
 
   it("Aprendre React is inside a link", () => {
