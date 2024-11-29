@@ -48,7 +48,7 @@ describe("App", () => {
 describe('App wit buttons', () => {
     it('App works', () => {
         const { container } = render(<App />)
-        console.log(container)
+        // console.log(container)
         const buttons = container.querySelectorAll('section > button')
       
         expect(buttons[0].textContent).toBe('+1')
