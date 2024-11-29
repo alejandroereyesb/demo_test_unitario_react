@@ -1,0 +1,4 @@
+Flujo CI/CD
+1. push a github
+2. ver como se pasan los test
+3. si ve bien, merge a rama que tenga despliegue render
