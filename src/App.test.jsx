@@ -17,7 +17,7 @@ describe("App", () => {
     render(<App title="React" />);
 
     screen.debug();
-  });
+  // });
 
   it("renders Vite + React", () => {
     const { container } = render(<App title="React" />);

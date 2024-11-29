@@ -6,6 +6,7 @@ on:
       - main
       - develop
       - pruebas
+      - pruebas_fs
     paths-ignore:
       - "docs/**"
       
