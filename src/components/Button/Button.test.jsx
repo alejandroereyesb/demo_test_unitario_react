@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import Button from "./Button";
 
 describe("Testing a button", () => {
@@ -33,4 +33,22 @@ describe("Testing a button", () => {
     fireEvent.click(button);
     expect(count).toBe(1000);
   });
+
+  it("Button try to cast string to number", () => {
+    let count = 0;
+
+    const incrementCount = (increment) => {
+      count += increment;
+      return count;
+    };
+
+    const { container } = render(
+      <Button increment={"1000"} onClickFunction={incrementCount} />
+    );
+    const button = container.querySelector("button");
+    fireEvent.click(button);
+    expect(count).toBe(1000);
+  });
+
+
 });
