@@ -7,8 +7,8 @@ import Button from "./components/Button";
 
 function App() {
   const [count, setCount] = useState(0);
-  let a;
 
+  
   const incrementCount = (increment) => {
     setCount(count + increment);
   };
