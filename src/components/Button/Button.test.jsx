@@ -31,7 +31,7 @@ describe("Testing a button", () => {
     );
     const button = container.querySelector("button");
     fireEvent.click(button);
-    expect(count).toBe(123);
+    expect(count).toBe(1000);
   });
 
   it("Button try to cast string to number", () => {
