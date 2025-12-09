@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, fireEvent } from "@testing-library/react";
-import Button from "./Button";
+import Button from
 
 describe("Testing a button", () => {
   it("Button +1000 is rendered", () => {
@@ -82,4 +82,21 @@ describe("Testing a button", () => {
     expect(count).toBe(1);
     expect(button.textContent).contains("+1");
   });
+
+  it("Button with Infinity prop", () => {
+    let count = 0;
+    
+    const incrementCount = (increment) => {
+      count += increment;
+      return count;
+    };
+    const { container } = render(
+      <Button increment={Infinity} onClickFunction={incrementCount} />
+    );
+    const button = container.querySelector("button");
+    fireEvent.click(button);
+    expect(count).toBe(Infinity); // 0 + Infinity  = Infinity
+    expect(button.textContent).contains("+Infinity");
+  });
+
 });
